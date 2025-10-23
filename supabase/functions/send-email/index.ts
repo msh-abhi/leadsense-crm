@@ -94,7 +94,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     // Configure sender name from environment variable
-    const baseFromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "noreply@leadsense.com";
+    const baseFromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "noreply@leadsense-crm.netlify.app";
     const senderName = Deno.env.get("RESEND_FROM_NAME") || "LeadSense CRM";
 
     const fromEmail = `${senderName} <${baseFromEmail}>`;

@@ -253,7 +253,7 @@ async function executeAICall(
           body: JSON.stringify({
             model: modelConfig.model_id,
             messages: [
-              { role: 'system', content: 'You are an AI assistant for a music education services company. Generate professional content and respond with valid JSON only.' },
+              { role: 'system', content: 'You are an AI assistant for a Athelete Fitness company. Generate professional content and respond with valid JSON only.' },
               { role: 'user', content: prompt }
             ],
             temperature: 0.3,
@@ -883,7 +883,7 @@ async function processManualReviewRequired(lead: any, analysisResult: any, reply
       .limit(1)
       .single();
 
-    const adminEmail = adminProfile?.email || 'admin@forteathletics.net';
+    const adminEmail = adminProfile?.email || 'admin@leadsense-crm.netlify.app';
 
     // Enhanced admin notification
     const adminNotificationContent = `
@@ -1236,7 +1236,7 @@ function performEnhancedKeywordAnalysis(content: string, leadData: any): any {
 
 function getLeadProfileUrl(leadId: string): string {
   // Construct the URL to the lead profile in the CRM
-  const baseUrl = Deno.env.get('APP_BASE_URL') || 'https://your-crm-app.com';
+  const baseUrl = Deno.env.get('APP_BASE_URL') || 'https://leadsense-crm.netlify.app';
   return `${baseUrl}/lead/${leadId}`;
 }
 
